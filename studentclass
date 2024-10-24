@@ -1,0 +1,44 @@
+class Student:
+    name = input('Enter Name:    ')
+    age = 10
+    schoolclass = 11
+    classteacher = 'Priya'
+    
+    def __init__(self): # using contructor to initialise the class variable
+        print("making a new student")
+    
+    def show_Details(self):
+        print("The details of student are:   ")
+        print('Name: ',self.name)
+        print('Age: ',self.age)
+        print('schoolclass: ',self.schoolclass)
+        print('classteacher: ',self.classteacher)
+    
+    def changedetails(self):
+        print('Please update your age: ')
+        self.age = int(input())
+        print('Please update the name of the student: ')
+        self.name = input()
+        print('\n Details Updated')
+
+
+# print the age of student
+print('Age = ',Student.age,'\n')
+print(Student.classteacher,'\n')
+
+#making objects
+student1 = Student()
+student2 = Student()
+print()
+# calling method to get the details
+student1.show_Details()
+print()
+student2.show_Details()
+
+print()
+# change student details 
+print('change details: ')
+student1.changedetails()
+
+print()
+student1.show_Details()
